@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfilFlow | Portefeuille d'Élite pour Talents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="logo">✦ PROFILFLOW</div>
+            <div class="nav-links">
+                <button class="nav-link" data-nav="home">Accueil</button>
+                <button class="nav-link" data-nav="students">Talents</button>
+                <button class="nav-link" id="adminPanelBtn">Admin ✦</button>
+            </div>
+        </nav>
+
+        <main id="main-content"></main>
+
+        <!-- Admin Sidebar -->
+        <div id="adminSidebar" class="admin-panel">
+            <div style="display: flex; justify-content: space-between;">
+                <h2 style="color:var(--gold)">Dashboard Premium</h2>
+                <button id="closeAdminBtn" style="background:none; border:none; color:white; font-size:28px; cursor:pointer;">&times;</button>
+            </div>
+            <form id="adminForm" class="admin-form">
+                <input type="text" id="studentId" placeholder="ID (auto pour ajout)" readonly>
+                <input type="text" id="fullName" placeholder="Nom complet" required>
+                <input type="text" id="major" placeholder="Filière (ex: MBA, Génie Logiciel)" required>
+                <input type="text" id="level" placeholder="Niveau (ex: Master 1)">
+                <textarea id="bio" placeholder="Biographie détaillée..."></textarea>
+                <input type="text" id="skillsInput" placeholder="Compétences (séparées par virgules) ex: Python, UI/UX">
+                <input type="url" id="photoUrl" placeholder="URL Photo de profil">
+                <input type="url" id="videoUrl" placeholder="Lien Vidéo YouTube Embed (ou video.mp4)">
+                <input type="url" id="audioUrl" placeholder="Lien Fichier Audio (.mp3)">
+                <input type="url" id="cvLink" placeholder="Lien CV (PDF)">
+                <input type="url" id="websiteLink" placeholder="Site personnel">
+                <input type="text" id="galleryImgs" placeholder="Galerie (URLs images séparées par | )">
+                <div class="flex-btns">
+                    <button type="submit" class="btn-gold" style="background:var(--gold); color:#000;">Sauvegarder</button>
+                    <button type="button" id="deleteStudentBtn" class="btn-gold" style="background:#a03; border-color:#a03;">Supprimer</button>
+                </div>
+            </form>
+            <p style="margin-top:1rem; font-size: 12px;">Mot de passe admin: 1234</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
